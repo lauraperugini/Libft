@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
+/*   By: lperugin <lperugin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 17:27:48 by lauraperugi       #+#    #+#             */
-/*   Updated: 2024/11/25 00:07:31 by lauraperugi      ###   ########.fr       */
+/*   Updated: 2024/11/25 18:07:18 by lperugin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,11 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if (!lst || !f || !del)
 		return (NULL);
-
 	new = ft_lstnew(f(lst->content));
 	if (!new)
 		return (NULL);
-
 	pres = new;
 	lst = lst->next;
-
 	while (lst)
 	{
 		pres->next = ft_lstnew(f(lst->content));

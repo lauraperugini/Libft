@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
+/*   By: lperugin <lperugin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 19:52:18 by lauraperugi       #+#    #+#             */
-/*   Updated: 2024/11/24 19:54:41 by lauraperugi      ###   ########.fr       */
+/*   Updated: 2024/11/25 18:21:45 by lperugin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
