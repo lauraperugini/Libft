@@ -1,19 +1,22 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lperugin <lperugin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 18:38:14 by lperugin          #+#    #+#             */
-/*   Updated: 2024/11/19 18:38:15 by lperugin         ###   ########.fr       */
+/*   Updated: 2024/11/24 23:33:19 by lauraperugi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putendl(char const *s)
-{
-    ft_putstr(s);
-    ft_putchar('\n');
-}
+#include "libft.h"
 
+void	ft_putendl(char *s)
+{
+	if (s)
+	{
+		ft_putstr(s);
+		ft_putchar('\n');
+	}
+}

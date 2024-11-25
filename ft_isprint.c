@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lperugin <lperugin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 16:48:56 by lperugin          #+#    #+#             */
-/*   Updated: 2024/11/20 17:50:34 by lperugin         ###   ########.fr       */
+/*   Updated: 2024/11/24 20:08:52 by lauraperugi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
@@ -19,4 +18,3 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
-

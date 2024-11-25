@@ -1,17 +1,18 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lperugin <lperugin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 18:35:47 by lperugin          #+#    #+#             */
-/*   Updated: 2024/11/19 18:35:48 by lperugin         ###   ########.fr       */
+/*   Updated: 2024/11/24 20:24:30 by lauraperugi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putchar_fd(char c, int fd)
+#include "libft.h"
+
+void	ft_putchar_fd(char c, int fd)
 {
-    write(fd, &c, 1);
+	write(fd, &c, 1);
 }

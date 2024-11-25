@@ -1,20 +1,20 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lperugin <lperugin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 17:02:52 by lperugin          #+#    #+#             */
-/*   Updated: 2024/11/11 17:02:53 by lperugin         ###   ########.fr       */
+/*   Updated: 2024/11/24 20:30:24 by lauraperugi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int i)
-{
-    if (i >= 'A' && i <= 'Z')
-    return (i+32);
+#include "libft.h"
 
-    return(i);
+int	ft_tolower(int i)
+{
+	if (i >= 'A' && i <= 'Z')
+		return (i + 32);
+	return (i);
 }

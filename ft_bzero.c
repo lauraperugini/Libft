@@ -1,20 +1,25 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lperugin <lperugin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:21:45 by lperugin          #+#    #+#             */
-/*   Updated: 2024/11/11 16:21:46 by lperugin         ###   ########.fr       */
+/*   Updated: 2024/11/24 20:05:52 by lauraperugi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_bzero(void *s, size_t len)
 {
-	for(size_t i = 0; i < n; i++) //maybe forbidden
+	size_t	i;
+
+	i = 0;
+	while (i < len)
 	{
-		((char*)s)[i] = 0;
+		((char *)s)[i] = 0;
+		i++;
 	}
 }

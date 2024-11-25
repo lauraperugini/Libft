@@ -1,33 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 20:25:08 by lperugin          #+#    #+#             */
-/*   Updated: 2024/11/24 20:31:46 by lauraperugi      ###   ########.fr       */
+/*   Created: 2024/11/24 17:27:48 by lauraperugi       #+#    #+#             */
+/*   Updated: 2024/11/25 00:07:31 by lauraperugi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t	i;
-	char	*str;
+	t_list	*new;
+	t_list	*pres;
 
-	if (!s)
+	if (!lst || !f || !del)
 		return (NULL);
-	i = strlen(s);
-	if (start >= i)
-		return (calloc(1, sizeof(char)));
-	if (len > i - start)
-		len = i - start;
-	str = malloc(len + 1);
-	if (!str)
+
+	new = ft_lstnew(f(lst->content));
+	if (!new)
 		return (NULL);
-	memcpy(str, s + start, len);
-	str[len] = '\0';
-	return (str);
+
+	pres = new;
+	lst = lst->next;
+
+	while (lst)
+	{
+		pres->next = ft_lstnew(f(lst->content));
+		if (!pres->next)
+		{
+			ft_lstclear(&new, del);
+			return (NULL);
+		}
+		pres = pres->next;
+		lst = lst->next;
+	}
+	return (new);
 }

@@ -11,24 +11,32 @@
 #                                                                              #
 # **************************************************************************** #
 
+
 NAME = libft.a
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -I/
-SRC = $(shell find . -name "*.c")
+CFLAGS = -Wall -Wextra -Werror -I .
+SRC = $(shell find . -name "*.c" ! -name "*_bonus.c")
 OBJ = $(SRC:.c=.o)
+SRC_BONUS = $(shell find . -name "*_bonus.c")
+OBJ_BONUS = $(SRC_BONUS:.c=.o)
+LIB = ar -rcs $(NAME)
 
-all : $(NAME)
+
+all: $(NAME)
+
+bonus: $(OBJ_BONUS)
+	$(LIB) $(OBJ_BONUS)
 
 $(NAME): $(OBJ)
-	ar -rcs $(NAME) $(OBJ)
+	$(LIB) $(OBJ)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-clean: 
-	rm -f $(OBJ)
+clean:
+	rm -f $(OBJ) $(OBJ_BONUS)
 
-fclean : clean
+fclean: clean
 	rm -f $(NAME) libft.so
 
 re: fclean all
@@ -36,7 +44,7 @@ re: fclean all
 so: $(OBJ)
 	$(CC) -fPIC -shared -o libft.so $(OBJ)
 
-.PHONY: all clean fclean re so
+.PHONY: all bonus clean fclean re so
 
 
 

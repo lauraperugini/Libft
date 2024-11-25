@@ -1,25 +1,24 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lperugin <lperugin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 17:16:17 by lperugin          #+#    #+#             */
-/*   Updated: 2024/11/20 17:16:18 by lperugin         ###   ########.fr       */
+/*   Updated: 2024/11/24 20:32:26 by lauraperugi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_len(long num)
 {
 	size_t	len;
 
 	len = 0;
-
 	if (num <= 0)
 		len = 1;
-
 	while (num != 0)
 	{
 		num / 10;
@@ -37,7 +36,6 @@ char	*ft_itoa(int n)
 	num = n;
 	len = ft_len(num);
 	str = (char *)malloc(len + 1);
-
 	if (!str)
 		return (NULL);
 	str[len--] = '\0';

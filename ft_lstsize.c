@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 20:25:08 by lperugin          #+#    #+#             */
-/*   Updated: 2024/11/24 20:31:46 by lauraperugi      ###   ########.fr       */
+/*   Created: 2024/11/24 17:28:14 by lauraperugi       #+#    #+#             */
+/*   Updated: 2024/11/24 20:10:04 by lauraperugi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+int	ft_lstsize(t_list *lst)
 {
-	size_t	i;
-	char	*str;
+	t_list	*temp;
+	int		i;
 
-	if (!s)
-		return (NULL);
-	i = strlen(s);
-	if (start >= i)
-		return (calloc(1, sizeof(char)));
-	if (len > i - start)
-		len = i - start;
-	str = malloc(len + 1);
-	if (!str)
-		return (NULL);
-	memcpy(str, s + start, len);
-	str[len] = '\0';
-	return (str);
+	temp = lst;
+	i = 0;
+	while (temp)
+	{
+		temp = temp->next;
+		i++;
+	}
+	return (i);
 }

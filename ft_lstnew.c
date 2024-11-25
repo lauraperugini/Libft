@@ -1,24 +1,25 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calloc.c                                           :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lperugin <lperugin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 17:28:53 by lperugin          #+#    #+#             */
-/*   Updated: 2024/11/11 17:28:54 by lperugin         ###   ########.fr       */
+/*   Created: 2024/11/24 17:28:00 by lauraperugi       #+#    #+#             */
+/*   Updated: 2024/11/24 21:02:23 by lauraperugi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_calloc(size_t count, size_t size)
+#include "libft.h"
+
+t_list	*ft_lstnew(void *content)
 {
-	char	*s;
+	t_list	*elem;
 
-	s = malloc(count * size);
-	if (!s)
-		return (NULL);
-
-	ft_bzero (s, count * size);
-	return (s);
+	elem = malloc(sizeof(t_list));
+	if (!elem)
+		return (0);
+	elem->content = content;
+	elem->next = 0;
+	return (elem);
 }

@@ -1,20 +1,20 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lperugin <lperugin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 17:18:28 by lperugin          #+#    #+#             */
-/*   Updated: 2024/11/11 17:18:29 by lperugin         ###   ########.fr       */
+/*   Updated: 2024/11/24 20:23:06 by lauraperugi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int i)
-{
-    if(i>'a' && i <='z')
-    return (i-32);
+#include "libft.h"
 
-    return(i);
+int	ft_toupper(int i)
+{
+	if (i > 'a' && i <= 'z')
+		return (i - 32);
+	return (i);
 }
