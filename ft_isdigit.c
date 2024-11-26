@@ -6,15 +6,15 @@
 /*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 16:48:56 by lperugin          #+#    #+#             */
-/*   Updated: 2024/11/24 19:59:53 by lauraperugi      ###   ########.fr       */
+/*   Updated: 2024/11/25 21:48:37 by lauraperugi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int i)
 {
-	if ((c >= '0' && c <= '9'))
+	if ((i >= '0' && i <= '9'))
 		return (1);
 	return (0);
 }

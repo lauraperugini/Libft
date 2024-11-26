@@ -6,7 +6,7 @@
 /*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 17:18:28 by lperugin          #+#    #+#             */
-/*   Updated: 2024/11/24 20:23:06 by lauraperugi      ###   ########.fr       */
+/*   Updated: 2024/11/26 01:48:46 by lauraperugi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_toupper(int i)
 {
-	if (i > 'a' && i <= 'z')
+	if (i >= 'a' && i <= 'z')
 		return (i - 32);
 	return (i);
 }

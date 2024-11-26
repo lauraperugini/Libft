@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lperugin <lperugin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 18:18:32 by lperugin          #+#    #+#             */
-/*   Updated: 2024/11/25 18:16:20 by lperugin         ###   ########.fr       */
+/*   Updated: 2024/11/25 19:54:13 by lauraperugi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,17 @@ char	*ft_strtrim(const char *s1, const char *set)
 	int		start;
 	int		end;
 
-	if (!s)
+	if (!s1 || !set)
 		return (NULL);
 	start = 0;
-	while (s[start] == '' || s[start == '\n'] || s[start] == '\t')
+	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
-	end = ft_strlen(s) - 1;
-	while (end >= start && (s[end] == '\0' || s[end] == '\n' || s[end] == '\t'))
+	end = ft_strlen(s1) - 1;
+	while (end >= start && ft_strchr(set, s1[end]))
 		end--;
-	if (end < start)
-		return (NULL);
 	str = (char *)malloc((end - start + 2) * sizeof(char));
 	if (!str)
 		return (NULL);
-	ft_strlcpy(str, s + start, end - start + 2);
+	ft_strlcpy(str, (char *)(s1 + start), end - start + 2);
 	return (str);
 }

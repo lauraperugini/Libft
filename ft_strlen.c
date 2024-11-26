@@ -6,13 +6,13 @@
 /*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 16:48:56 by lperugin          #+#    #+#             */
-/*   Updated: 2024/11/24 20:02:30 by lauraperugi      ###   ########.fr       */
+/*   Updated: 2024/11/25 19:35:05 by lauraperugi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	i;
 

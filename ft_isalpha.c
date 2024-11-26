@@ -6,13 +6,13 @@
 /*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 16:48:56 by lperugin          #+#    #+#             */
-/*   Updated: 2024/11/24 20:14:54 by lauraperugi      ###   ########.fr       */
+/*   Updated: 2024/11/25 19:07:21 by lauraperugi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);

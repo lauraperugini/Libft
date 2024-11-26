@@ -6,33 +6,11 @@
 /*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 20:55:15 by lperugin          #+#    #+#             */
-/*   Updated: 2024/11/24 22:38:38 by lauraperugi      ###   ########.fr       */
+/*   Updated: 2024/11/26 01:46:56 by lauraperugi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_strdup(const char *s)
-{
-	char	*dup;
-	size_t	len;
-	size_t	i;
-
-	if (!s)
-		return (NULL);
-	len = strlen(s);
-	dup = (char *)malloc((len + 1) * sizeof(char));
-	if (!dup)
-		return (NULL);
-	i = 0;
-	while (s[i])
-	{
-		dup[i] = s[i];
-		i++;
-	}
-	dup[i] = '\0';
-	return (dup);
-}
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {
@@ -46,7 +24,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 		return (ft_strdup(s2));
 	if (!s2)
 		return (ft_strdup(s1));
-	all_size = strlen(s1) + strlen(s2);
+	all_size = ft_strlen(s1) + ft_strlen(s2);
 	str = (char *)malloc((all_size + 1) * sizeof(char));
 	if (!str)
 		return (NULL);

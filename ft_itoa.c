@@ -6,7 +6,7 @@
 /*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 17:16:17 by lperugin          #+#    #+#             */
-/*   Updated: 2024/11/24 20:32:26 by lauraperugi      ###   ########.fr       */
+/*   Updated: 2024/11/25 19:51:37 by lauraperugi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_len(long num)
 		len = 1;
 	while (num != 0)
 	{
-		num / 10;
+		num /= 10;
 		len++;
 	}
 	return (len);
@@ -40,14 +40,16 @@ char	*ft_itoa(int n)
 		return (NULL);
 	str[len--] = '\0';
 	if (num == 0)
-	{
 		str[0] = '0';
-		return (str);
+	if (num < 0)
+	{
+		str[0] = '-';
+		num = -num;
 	}
 	while (num > 0)
 	{
 		str[len--] = (num % 10) + '0';
-		num / 10;
+		num /= 10;
 	}
 	return (str);
 }
