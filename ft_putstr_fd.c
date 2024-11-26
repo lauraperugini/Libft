@@ -3,19 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
+/*   By: lperugin <lperugin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 18:37:06 by lperugin          #+#    #+#             */
-/*   Updated: 2024/11/24 20:51:19 by lauraperugi      ###   ########.fr       */
+/*   Updated: 2024/11/26 13:41:12 by lperugin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *str, int fd)
 {
-	while (*s)
+	int	i;
+
+	i = 0;
+	while (str[i])
 	{
-		ft_putchar_fd(*s++, fd);
+		write(fd, &str[i], 1);
+		i++;
 	}
 }

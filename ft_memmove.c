@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
+/*   By: lperugin <lperugin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 16:48:56 by lperugin          #+#    #+#             */
-/*   Updated: 2024/11/26 01:38:06 by lauraperugi      ###   ########.fr       */
+/*   Updated: 2024/11/26 13:38:58 by lperugin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,22 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	void	*ret;
+	char	*s;
+	char	*d;
 
-	if (!dst && !src)
+	s = (char *)src;
+	d = (char *)dst;
+	if (!d && !s)
 		return (0);
-	ret = dst;
-	if (src < dst)
+	if (s < d)
 	{
-		src += len;
-		dst += len;
+		s += len;
+		d += len;
 		while (len--)
-			*(char *)--dst = *(char *)--src;
+			*(char *)--d = *(char *)--s;
 	}
 	else
 		while (len--)
-			*(char *)dst++ = *(char *)src++;
-	return (ret);
+			*(char *)d++ = *(char *)s++;
+	return (dst);
 }

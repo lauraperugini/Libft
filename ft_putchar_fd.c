@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lauraperugini <lauraperugini@student.42    +#+  +:+       +#+        */
+/*   By: lperugin <lperugin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 18:35:47 by lperugin          #+#    #+#             */
-/*   Updated: 2024/11/24 20:24:30 by lauraperugi      ###   ########.fr       */
+/*   Updated: 2024/11/26 13:40:31 by lperugin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
